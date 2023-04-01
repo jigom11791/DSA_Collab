@@ -45,3 +45,4 @@ class LinkedList:
         self.tail = curr
         self.tail.next = None
         return val
+

@@ -1,5 +1,6 @@
-# comment out 
+# comment out and add your own
 from jgom.linked_list import LinkedList
+from jgom.stack import Stack
 
 
 if __name__ == "__main__":
@@ -36,4 +37,27 @@ if __name__ == "__main__":
     # push(a) – Inserts the element ‘a’ at the top of the stack – Time Complexity: O(1)
     # pop() – Deletes the topmost element of the stack – Time Complexity: O(1)
 
-    # test empty()
+    print('== Stack ==')
+    # initialize the stack
+    stack = Stack(10)
+
+    # Test empty()
+    print(f'Test empty(): \n\t{stack.empty()}')
+
+    # Test size()
+    print(f"Test size: \n\t{len(stack)}")
+
+    # Test peek():
+    print(f"Test peek(): \n\t{stack.peek()}")
+
+    # Test push()
+    print(f'Test push(): \n\tTop Before: {stack.peek() }')
+    stack.push(40)
+    print(f"\tTop After: { stack.peek() }")
+
+    # Test pop()
+    print(f"Test pop():\n\tCurrent Top: {stack.peek() }")
+    stack.pop()
+    print(f'\tNew Top: { stack.peek() }')
+    stack.pop()
+    print(f"\tNew Top: { stack.peek()}")
